@@ -21,7 +21,7 @@ spec:
   arguments:
     - s3a://ezaf-demo/data/mnist
     - binaryFile
-    - file:///mounts/data/{{dag_run.conf.get("training_path", "mnist-spark-data3")}}
+    - file:///mounts/data/{{dag_run.conf.get("training_path", "mnist-spark-data")}}
     - parquet
   restartPolicy:
     type: Never
