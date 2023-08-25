@@ -20,7 +20,7 @@ dag = DAG(
     schedule_interval=None,
     tags=['e2e example', 'ezaf', 'spark', 'parquet', 'mnist'],
     params={
-        'username': "hpedemo-user01",
+        'username': "admin",
         'training_path': "mnist-spark-data",
         's3_secret_name': "spark-s3-creds"
     }
