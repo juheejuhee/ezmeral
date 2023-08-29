@@ -1,7 +1,7 @@
 apiVersion: "sparkoperator.hpe.com/v1beta2"
 kind: SparkApplication
 metadata:
-  name: spark-mnist-{{dag_run.conf.get("username", "hpedemo-user01")}}-{{ts_nodash|replace("T", "")}}
+  name: spark-mnist-{{dag_run.conf.get("username", "admin")}}-{{ts_nodash|replace("T", "")}}
   namespace: spark
 spec:
   sparkConf:
@@ -48,4 +48,4 @@ spec:
   volumes:
     - name: spark-data
       persistentVolumeClaim:
-        claimName: {{dag_run.conf.get("username", "hpedemo-user01")}}-spark-pvc
+        claimName: {{dag_run.conf.get("username", "admin")}}-spark-pvc
